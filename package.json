@@ -5,12 +5,14 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test",
-    "check": "node --check src/server.js && node --check src/portfolio.js && node --check public/app.js"
+    "check": "node --check src/server.js && node --check src/portfolio.js && node --check public/app.js && node --check curriculo-andre/app.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
     "yaml": "^2.8.1"
   },
-  "engines": {"node": ">=20"},
+  "engines": {
+    "node": ">=20"
+  },
   "license": "MIT"
 }
