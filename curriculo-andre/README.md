@@ -20,13 +20,9 @@ python -m http.server 8080 --directory curriculo-andre
 No Vercel: diretório raiz `curriculo-andre`, preset **Other**, sem comandos de instalação/build, diretório de saída `.`.
 A configuração `vercel.json` aplica cabeçalhos de segurança e bloqueia indexação durante o teste.
 
-## Retrato original: pendente de upload
-O anexo `1000378636.jpg` foi exibido na conversa, mas o arquivo físico não estava disponível no ambiente desta sessão. Nenhuma imagem substituta foi gerada ou atribuída ao usuário.
-A composição usa o monograma AM até que a foto original seja disponibilizada.
-Para integrar a foto:
-1. Adicionar o arquivo original em `curriculo-andre/assets/andre-marques.jpg`.
-2. Em `app.js`, definir `PROFILE_PHOTO = "./assets/andre-marques.jpg"`.
-3. Aguardar o novo deploy. O retrato é carregado apenas se o arquivo for válido.
+## Retrato profissional
+A foto original autorizada pelo titular está em `assets/andre-marques.jpg` e é apresentada diretamente no HTML, inclusive quando o JavaScript está desativado.
+O arquivo foi preservado sem transformação; o enquadramento responsivo é aplicado apenas pelo CSS.
 
 ## Edição e evidências
 O HTML contém o currículo completo. O CSS e o JavaScript ficam em arquivos separados.

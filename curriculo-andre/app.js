@@ -1,7 +1,5 @@
 "use strict";
 (() => {
-  // Set the repository-relative filename after the original portrait is uploaded.
-  const PROFILE_PHOTO = null;
   const projects = Array.from(document.querySelectorAll(".project"));
   const filters = Array.from(document.querySelectorAll("[data-filter]"));
   const filterStatus = document.querySelector("[data-filter-status]");
@@ -59,19 +57,4 @@
   window.addEventListener("resize", updateProgress, {passive:true});
   updateProgress();
 
-  if (PROFILE_PHOTO) {
-    const photo = new Image();
-    photo.alt = "Retrato profissional de André Marques da Silva";
-    photo.decoding = "async";
-    photo.fetchPriority = "high";
-    photo.addEventListener("load", () => {
-      const host = document.querySelector("[data-photo-container]");
-      if (host) host.replaceChildren(photo);
-      const monogram = document.querySelector(".portrait-monogram");
-      if (monogram) monogram.hidden = true;
-      const caption = document.querySelector(".portrait figcaption");
-      if (caption) caption.textContent = photo.alt;
-    }, {once:true});
-    photo.src = PROFILE_PHOTO;
-  }
 })();
